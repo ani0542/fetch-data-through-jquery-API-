@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='index3.css'>
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+</head>
+<body>
+  <section>
+    <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+    <div class='centerDiv'>
+
+        <div class='details'>
+          <label>ENTER YOUR NAME</label><br>
+          <input type="text" name="" id="nameid">
+        </div>
+
+        <div class="imgdiv">
+          <img src="112.jpg" width="200" height="200" class="imgchange">
+         </div>
+         <button> Click Me</button>
+    </div>
+  </section>
+
+  <!-- ////jquery part//// -->
+<!-- //copy this link cdn from either w3 school google cdn or from  jquery - cdnjs.com - The best FOSS CDN for web related  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function()
+      {
+         $('button').click(function()
+         {
+           //ab user jo bhi likhega is a me store karenge
+            const a=$('#nameid').val();
+            //alert(a);
+            $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/  ${a}`);
+            //haa agar aap soch rahe hai ki kaise ye naam change ho gaya to mai aapko dikhata hoon
+            //const b=$('.imgchange');
+           // console.log(b)
+            //phir console pe jaiye developer tools me phir usme image me jaiye
+
+         })
+      })
+  </script>
+</body>
+</html>
